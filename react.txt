@@ -1,0 +1,33 @@
+###Steps to Use React
+
+Open terminal
+1.npx create-react-app .          #Initialize the react
+code . 			          #(optional) To open the location with the vscode
+
+2. Remove the unnecessary files    #index.css,app.text.js,logo,svg,report-web-vitals.js,setup-tests
+
+3. Removes the lines from index.js  #1. import removeewbvitals from *, #2 import ./index.css, #3 reportwebvitals();
+
+4.Remove from app.js #1 import logo form ./logo #2.Remove everything inside the div tag
+
+5. For testcase add <h1>Something</h1>
+
+6. Start react project using
+npm start
+
+7. Search for tailwind create react app    ## to find the tailwind
+
+8. #install the tailwind and its config 
+npm install -D tailwindcss@3
+npx tailwindcss init
+
+9. Open the tailwind.config.js
+inside the content add './src/**/*.{js,jsx,ts,tsx}'
+
+10. Add these lines to css file
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+11.now restart the react
+npm start
