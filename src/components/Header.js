@@ -1,4 +1,5 @@
 import { Bars3Icon } from "@heroicons/react/16/solid"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { useState } from "react"
 
 export default function Header() {
