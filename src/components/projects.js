@@ -3,38 +3,48 @@ import site2 from '../assets/food-ecommerce.jpg'
 import site3 from '../assets/website-blog.jpg'
 
 export default function Projects () {
-    return <section className="flex flex-col py-20 px-5 justify-center bg-primary text-white" id='projects'>
-        <div className="w-full">
-        <div className="flex flex-col px-10 py-5"  >
-            <h1 className="text-3xl border-b-4 border-[#e026c8] mb-5 w-[150px] font-bold">Projects</h1>
-            <p>These are some of my projects i have built using HTML,CSS, React and Wordpress.Check Out</p>
+    const config={
+        proj: [
+            {
+                image: site1,
+                description: 'Ecommerce Site built with HTML,CSS',
+                link: 'https://gadgets-pearl.vercel.app/',
+            },
+            {
+                image: site2,
+                description: 'Wordpress Website from scratch',
+                link: 'https://imart.rf.gd/',
+            },
+            {
+                image: site3,
+                description: 'Multi Vendor Site Site like Amazon using Wordpress',
+                link: '/',
+            }
+        ]
+    }
+    return <section id='projects' className="flex  flex-col py-20 px-5 justify-center bg-primary text-white">
+    <div className="w-full">
+        <div className="flex flex-col px-10 py-5">
+            <h1 className="text-4xl border-b-4 border-secondary mb-5 w-[150px] font-bold">Projects</h1>
+            <p>These are some of my best projects. I have built these with React, MERN and vanilla CSS. Check them out.</p>
         </div>
+    </div>
+    <div className="w-full">
+        <div className='flex flex-col md:flex-row px-10 gap-5'>
+            {config.proj.map((proj) => (
+                 <div className='relative'>
+                    <img className='h-[200px] w-[500px]' src={proj.image} alt=""/>
+                    <div className='project-desc'>
+                        <p className='text-center px-5 py-5'>{proj.description}</p>
+                        <div className='flex justify-center'>
+                            <a className='btn' target='blank' href={proj.link}>View Project</a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+           
+           
         </div>
-        <div className="w-full">
-            <div className='flex flex-col md:flex-row px-10 gap-5'>
-                <div className='relative'>
-                <img className='h-[200px] w-[500px]' src={site1} alt='Gadgets Ecom Site'/>
-                <div className='project-desc'>
-                    <p className='text-center px-5 py-5'>Ecommerce Site built with HTML,CSS</p>
-                </div>
-            </div>
-            <div className='relative'>
-                <img className='h-[200px] w-[500px]' src={site2} alt='Wordpress Site'/>
-                <div className='project-desc'>
-                    <p className='text-center px-5 py-5'>Wordpress Website from scratch</p>
-                </div>
-                </div>
-            <div>
-            <div className='relative'>
-                <img className='h-[200px] w-[500px]' src={site3} alt='React Site'/>
-                <div className='project-desc'>
-                    <p className='text-center px-5 py-5'>Multi Vendor Site Site like Amazon using Wordpress</p>
-                </div>
-                </div>
-            </div>
-            <div>
-             </div>
-             </div>   
-            </div>
-    </section>
+    </div>
+</section>
 }
