@@ -18,7 +18,7 @@ export default function Projects () {
             {
                 image: site3,
                 description: 'Multi Vendor Site Site like Amazon using Wordpress',
-                link: '/',
+                link: 'http://shop-store.great-site.net',
             }
         ]
     }
