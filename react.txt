@@ -31,3 +31,5 @@ inside the content add './src/**/*.{js,jsx,ts,tsx}'
 
 11.now restart the react
 npm start
+
+npm install react-icons
