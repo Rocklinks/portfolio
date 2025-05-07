@@ -17,8 +17,8 @@ export default function Projects () {
             },
             {
                 image: site3,
-                description: 'Multi Vendor Site Site like Amazon using Wordpress',
-                link: 'http://shop-store.great-site.net',
+                description: 'AI Tools Landing Page',
+                link: 'https://dev-store1233.pantheonsite.io/t',
             }
         ]
     }
